@@ -1,19 +1,29 @@
 <!DOCTYPE html>
   <head>
     <meta charset="utf-8">
-    <title>TITLE</title>
+    <title>Number Guessing Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Your link to your CSS file -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="styles.css">
     <!-- Your Javascript file goes here -->
-    <script src="" async defer></script>
+    <script src="/app.js" async defer></script>
   </head>
-  <body>
-    <!-- your HTML should go here -->
-    <nav>
-      <h1>Let's Play the Guessing Number Game!</h1>
-    </nav>
-
-
+  <!-- body starts -->
+  <body id="body" style="background-image: url('GuessingGameGradient.png');">
+    <div class="game_body"> 
+      <div class="directions">
+        <h1 class="main_text" id="main_text">Let's Play the Number Guessing Game!</h1>
+        <h3>Guess a number between 1 and 100!</h3>
+        <h5 id="guessCount"></h5>
+      </div>
+      <form>
+        <input class="userGuess" type="text" id="userGuess" pattern="[0-9]+" required >
+        <!-- <input value="CLICK HERE TO GUESS THE NUMBER!"> -->
+        <h5 id="response"></h5>
+        <button type="submit" id="submitButton" class="submitButton" onclick="guessingGame(event)">Click here to guess the number!</button>
+        <button type="submit" id="reset" class="submitButton" action="http://127.0.0.1:5501/index.html?">Start Over!</button>
+    </div>
   </body>
+  <!-- body ends -->
 </html>
+
